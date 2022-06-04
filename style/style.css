@@ -1,0 +1,193 @@
+:root {
+  font-size: 62.5%;
+  --azul: #0A3871;
+  --azul-claro: #D8DFE8;
+  --fundo: #F3F5FC;
+
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background-color: var(--fundo);
+}
+
+.wrapper {
+  width: 375px;
+  margin-inline: auto;
+  padding-inline: 1.6rem;
+}
+
+header {
+  padding-bottom: 7rem;
+}
+
+menu {
+  padding: 0
+}
+
+menu textarea {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+textarea:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+menu textarea.criptografar-descriptografar {
+  background-color: var(--fundo);
+  font-size: 3.2rem;
+  color: var(--azul);
+  line-height: 150%;
+}
+
+
+menu textarea.criptografar-descriptografar::placeholder {
+  color: var(--azul)
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  font-size: 1.2rem;
+}
+
+button {
+  display: block;
+  margin-inline: auto;
+  width: 100%;
+  padding: 2.4rem;
+  margin-top: 1.6rem;
+  border-radius: 2.4rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+button.criptografar {
+  background-color: var(--azul);
+  border: none;
+  color: white;
+}
+
+button.descriptografar {
+  border: 1px solid var(--azul);
+  color: var(--azul);
+  background-color: var(--fundo);
+}
+
+.resultado {
+  margin-block: 8rem;
+  padding: 3.2rem;
+  border-radius: 3.2rem;
+
+  font-size: 1.6rem;
+  line-height: 120%;
+  text-align: left;
+
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+
+}
+
+.resultado::placeholder {
+  font-weight: bold;
+  font-size: 2.4rem;
+  text-align: center;
+
+}
+
+.copiar {
+  width: 70%;
+  color: var(--azul);
+  border-color: var(--azul);
+  /* background-color: white; */
+
+  position: relative;
+  bottom: 11vw;
+
+  transition: .5s;
+}
+
+.copiar:hover {
+  background: var(--azul-claro);
+}
+
+button.sumir{
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 768px;
+    margin-inline: 0;
+  }
+
+  .botoes {
+    display: flex;
+    gap: 2.4rem;
+  }
+
+  button.copiar {
+    background-color: white;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+   width: 95vw;
+  }
+
+  header {
+    display: inline;
+  }
+
+  menu {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 'A B'
+ 
+  }
+
+  .col-a {
+    grid-area: 'A';
+    margin-left: 24rem;
+    margin-top: 7rem;
+  }
+
+  .col-b {
+    grid-area: 'B';
+    margin-left: 8rem;
+  }
+  
+  button.descriptografar {
+    background-color: var(--azul-claro);
+  }
+
+  .resultado {
+    height: 94.4rem;
+    margin-block: 0;
+
+  }
+
+  menu .adiciona-imagem {
+    background-image: url('https://trello.com/1/cards/62667bbf153e288fc98055a2/attachments/62667bbf153e288fc9805777/download/1.PNG');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .copiar {
+   
+    bottom: 11%;
+  }
+
+
+}
