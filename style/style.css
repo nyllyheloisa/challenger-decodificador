@@ -179,7 +179,7 @@ button.sumir{
   }
 
   menu .adiciona-imagem {
-    background-image: url('https://trello.com/1/cards/62667bbf153e288fc98055a2/attachments/62667bbf153e288fc9805777/download/1.PNG');
+    background-image: url(./img/1.PNG);
     background-repeat: no-repeat;
     background-size: 100%;
   }
